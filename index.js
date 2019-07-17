@@ -39,29 +39,22 @@ export default class NaverMapView extends Component {
   }
 
   render() {
-    <NaverMap
-      {...this.props}
-      style={[{ width: "100%", height: "100%" }, this.props.style]}
-      ref={ref => {
-        this.map = ref;
-      }}
-    />;
-    // if (this.state.permissionGranted) {
-    //   return (
-    //     <NaverMap
-    //       {...this.props}
-    //       style={[{ width: "100%", height: "100%" }, this.props.style]}
-    //       ref={ref => {
-    //         this.map = ref;
-    //       }}
-    //     />
-    //   );
-    // } else {
-    //   return (
-    //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-    //       <Text>권한 에러</Text>
-    //     </View>
-    //   );
-    // }
+    if (this.state.permissionGranted) {
+      return (
+        <NaverMap
+          {...this.props}
+          style={[{ width: "100%", height: "100%" }, this.props.style]}
+          ref={ref => {
+            this.map = ref;
+          }}
+        />
+      );
+    } else {
+      return (
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <Text>권한 에러</Text>
+        </View>
+      );
+    }
   }
 }
