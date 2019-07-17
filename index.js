@@ -5,7 +5,7 @@
 // export default RNNaverMap;
 
 import React, { Component } from "react";
-import { requireNativeComponent, findNodeHandle, NativeModules, Platform, PermissionsAndroid, View } from "react-native";
+import { requireNativeComponent, findNodeHandle, NativeModules, Platform, PermissionsAndroid, View, Text } from "react-native";
 
 const NaverMap = requireNativeComponent("NaverMap", NaverMapView);
 
@@ -39,18 +39,29 @@ export default class NaverMapView extends Component {
   }
 
   render() {
-    if (this.state.permissionGranted) {
-      return (
-        <NaverMap
-          {...this.props}
-          style={[{ width: "100%", height: "100%" }, this.props.style]}
-          ref={ref => {
-            this.map = ref;
-          }}
-        />
-      );
-    } else {
-      return <View style={{ flex: 1 }}>{`권한 에러`}</View>;
-    }
+    <NaverMap
+      {...this.props}
+      style={[{ width: "100%", height: "100%" }, this.props.style]}
+      ref={ref => {
+        this.map = ref;
+      }}
+    />;
+    // if (this.state.permissionGranted) {
+    //   return (
+    //     <NaverMap
+    //       {...this.props}
+    //       style={[{ width: "100%", height: "100%" }, this.props.style]}
+    //       ref={ref => {
+    //         this.map = ref;
+    //       }}
+    //     />
+    //   );
+    // } else {
+    //   return (
+    //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    //       <Text>권한 에러</Text>
+    //     </View>
+    //   );
+    // }
   }
 }

@@ -1,39 +1,34 @@
 package com.reactlibrary;
 
-import android.os.Bundle;
 import android.view.View;
 import android.util.Log;
-import android.content.Context;
-import android.widget.LinearLayout;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.bridge.ReactApplicationContext;
 
 import com.naver.maps.map.MapView;
-import com.naver.maps.map.NaverMap;
-import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.MapFragment;
+import com.naver.maps.map.NaverMapSdk;
 
-import com.reactlibrary.R;
+//import com.reactlibrary.R;
 
-public class RNMapView extends MapView {
-	// private ThemedReactContext mContext;
-	// private MapView mMapView;
-	// private static final String TAG = "NaverMap";
-    private Context context;
+public class RNMapView extends MapView  {
+    private ThemedReactContext mContext;
+    private MapView mMapView;
+    private NaverMapSdk naverMapSdk;
+    private static final String LOG_TAG = "NaverMap";
 
-    public RNMapView(ThemedReactContext context) {
-        super(context);
-        this.context = context;
-        init();
+    public RNMapView(ThemedReactContext themedReactContext) {
+        super(themedReactContext.getCurrentActivity());
+        mContext = themedReactContext;
+        mMapView = this;
+        
+        // NaverMapSdk.getInstance(this).setClient(new NaverMapSdk.NaverCloudPlatformClient("rrpzhwdlo5"));
+        
+        // this.setOnAuthFailedListener(new OnAuthFailedListener() {
+        //     public void onAuthFailed(new ) {
+                
+        //     }
+        // })
+
     }
-
-    // public RNMapView()
-
-    public void init() {
-       inflate(this.context, R.layout.activity_map_view, this);
-    }
-
 }
