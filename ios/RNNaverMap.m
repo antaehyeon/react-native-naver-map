@@ -10,7 +10,7 @@
 @implementation RNNaverMap
 
 // To export a module named RNNaverMap
-RCT_EXPORT_MODULE(RNNaver);
+RCT_EXPORT_MODULE(NaverMap);
 
 - (UIView *)view
 {

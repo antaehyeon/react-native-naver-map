@@ -22,8 +22,8 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 
 public class RNNaverMapManager extends SimpleViewManager<RNMapView> {
-    public static final String REACT_CLASS = "NaverMapModule";
-    public static final String TAG = "NaverMapModule";
+    public static final String REACT_CLASS = "NaverMap";
+    public static final String TAG = "NaverMap";
     // private RNMapView rnMapView;
     // private final ReactApplicationContext appContext;
     private MapView mapView;

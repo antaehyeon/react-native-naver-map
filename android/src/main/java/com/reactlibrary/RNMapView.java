@@ -21,7 +21,7 @@ import com.reactlibrary.R;
 public class RNMapView extends MapView {
 	// private ThemedReactContext mContext;
 	// private MapView mMapView;
-	// private static final String TAG = "NaverMapModule";
+	// private static final String TAG = "NaverMap";
     private Context context;
 
     public RNMapView(ThemedReactContext context) {
