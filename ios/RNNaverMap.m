@@ -1,16 +1,16 @@
-// RNNaverMap.m
+// RNNaverMaps.m
 #import <React/RCTLog.h>
 #import <MapKit/MapKit.h>
 #import <React/RCTViewManager.h>
 @import NMapsMap;
 
-@interface RNNaverMap : RCTViewManager
+@interface RNNaverMaps : RCTViewManager
 @end
 
-@implementation RNNaverMap
+@implementation RNNaverMaps
 
-// To export a module named RNNaverMap
-RCT_EXPORT_MODULE(NaverMap);
+// To export a module named RNNaverMaps
+RCT_EXPORT_MODULE(RNNaver);
 
 - (UIView *)view
 {

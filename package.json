@@ -1,6 +1,6 @@
 {
   "name": "react-native-naver-map",
-  "version": "0.1.16",
+  "version": "0.1.22",
   "description": "react-native 용 naver map 라이브러리 입니다.\n 아직 개발중이므로, 정상작동 하지 않습니다. (!!)",
   "main": "index.js",
   "scripts": {

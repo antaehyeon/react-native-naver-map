@@ -7,7 +7,8 @@
 import React, { Component } from "react";
 import { requireNativeComponent, findNodeHandle, NativeModules, Platform, PermissionsAndroid, View, Text } from "react-native";
 
-const NaverMap = requireNativeComponent("NaverMap", NaverMapView);
+const EXPORT_MODULE_NAME = Platform.OS === "android" ? "NaverMap" : "RNNaver";
+const NaverMap = requireNativeComponent(EXPORT_MODULE_NAME, NaverMapView);
 
 export default class NaverMapView extends Component {
   constructor(props) {
