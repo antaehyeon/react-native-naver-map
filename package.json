@@ -1,16 +1,30 @@
 {
   "name": "react-native-naver-map",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "react-native 용 naver map 라이브러리 입니다.\n 아직 개발중이므로, 정상작동 하지 않습니다. (!!)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antaehyeon/react-native-naver-map"
+  },
   "keywords": [
-    "react-native"
+    "react-native",
+    "navermap"
   ],
-  "author": "HYEON",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antaehyeon/react-native-naver-map/issues",
+    "email": "antaehyeon@live.co.kr"
+  },
+  "author": {
+    "name": "HYEON",
+    "email": "antaehyeon@live.co.kr",
+    "url": "https://github.com/antaehyeon"
+  },
+  "license": "(MIT OR Apache-2.0)",
+  "homepage": "https://www.npmjs.com/package/react-native-naver-map",
   "peerDependencies": {
     "react-native": "^0.60.3"
   }
